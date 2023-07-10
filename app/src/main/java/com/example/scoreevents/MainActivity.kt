@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         changeAmountButton.setOnClickListener {
             val amountString = changeAmountEditText.text.toString()
-            if (amountString.isEmpty()) {
+            if (amountString.isNotBlank()) {
                 changeAmount = amountString.toInt()
             }
         }
