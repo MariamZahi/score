@@ -16,3 +16,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var team1ScoreTextView: TextView
     private lateinit var team2ScoreTextView: TextView
     private lateinit var changeAmountEditText: EditText
+
+    //Introduce buttons
+
+    val increaseTeam1Button: Button = findViewById(R.id.increaseTeam1Button)
+    val decreaseTeam1Button: Button = findViewById(R.id.decreaseTeam1Button)
+    val increaseTeam2Button: Button = findViewById(R.id.increaseTeam2Button)
+    val decreaseTeam2Button: Button = findViewById(R.id.decreaseTeam2Button)
+    val changeAmountButton: Button = findViewById(R.id.changeAmountButton)
+
+    increaseTeam1Button.setOnClickListener {
+        team1Score += changeAmount
+        updateScores()
+    }
