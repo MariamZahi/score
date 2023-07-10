@@ -17,6 +17,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var team2ScoreTextView: TextView
     private lateinit var changeAmountEditText: EditText
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        team1ScoreTextView = findViewById(R.id.team1Score)
+        team2ScoreTextView = findViewById(R.id.team2Score)
+        changeAmountEditText = findViewById(R.id.changeAmountEditText)
+
     //Introduce buttons
 
     val increaseTeam1Button: Button = findViewById(R.id.increaseTeam1Button)
