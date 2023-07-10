@@ -37,3 +37,37 @@ class MainActivity : AppCompatActivity() {
         team1Score += changeAmount
         updateScores()
     }
+        decreaseTeam1Button.setOnClickListener {
+            team1Score -= changeAmount
+            if (team1Score < 0) {
+                team1Score = 0
+            }
+            updateScores()
+        }
+
+        increaseTeam2Button.setOnClickListener {
+            team2Score += changeAmount
+            updateScores()
+        }
+
+        decreaseTeam2Button.setOnClickListener {
+            team2Score -= changeAmount
+            if (team2Score < 0) {
+                team2Score = 0
+            }
+            updateScores()
+        }
+
+        changeAmountButton.setOnClickListener {
+            val amountString = changeAmountEditText.text.toString()
+            if (amountString.isNotEmpty()) {
+                changeAmount = amountString.toInt()
+            }
+        }
+    }
+
+    private fun updateScores() {
+        team1ScoreTextView.text = "Team 1 Score: $team1Score"
+        team2ScoreTextView.text = "Team 2 Score: $team2Score"
+    }
+}
