@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        team1ScoreTextView = findViewById(R.id.team1Score)
-        team2ScoreTextView = findViewById(R.id.team2Score)
+        team1ScoreTextView = findViewById(R.id.team1ScoreLabel)
+        team2ScoreTextView = findViewById(R.id.team2ScoreLabel)
         changeAmountEditText = findViewById(R.id.changeAmountEditText)
 
     //Introduce buttons
