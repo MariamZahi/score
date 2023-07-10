@@ -60,12 +60,11 @@ class MainActivity : AppCompatActivity() {
 
         changeAmountButton.setOnClickListener {
             val amountString = changeAmountEditText.text.toString()
-            if (amountString.isNotEmpty()) {
+            if (amountString.isEmpty()) {
                 changeAmount = amountString.toInt()
             }
         }
     }
-
     private fun updateScores() {
         team1ScoreTextView.text = "Team 1 Score: $team1Score"
         team2ScoreTextView.text = "Team 2 Score: $team2Score"
